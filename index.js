@@ -154,7 +154,7 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+
 }
   
   
@@ -170,10 +170,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(KM){
+    return km*0.62137119;
   }
-
+miles()
 
 
 //Task 5b - Feet to CM
@@ -221,15 +221,15 @@ Using the grade function below do the following:
 */
   
 function grade(num){
-    if(num < 100 && num >= 90){
+    if(num<100 && num>=90){
       return 'you got an A';
-    }else if(num <90 && num >= 80){
+    }else if(num<90 &&num>=80){
       return 'you got a B';
-    }else if(num < 80 && num >= 70){
+    }else if(num<80 && num>=70){
       return 'you got a C';
-    }else if(num < 70 && num >= 60){
+    }else if(num<70 && num>=60){
       return 'you got a D';
-    }else if(num < 60){
+    }else if(num<60){
       return 'you got an F';
     }
   }

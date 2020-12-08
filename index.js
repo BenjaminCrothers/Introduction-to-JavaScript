@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+var votingAge = 18
+if(votingAge>=18){
+  console.log(true)
+}
 
 
 /*
@@ -30,8 +33,11 @@ Do the following:
 
    HINT: no function required
 */
-
-
+var car=2005
+var wife=1
+if(wife=1){
+  car=2004;
+}
 
 
 
@@ -45,7 +51,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+var year="1999"
+Number(year)
 
 
 
@@ -57,11 +64,10 @@ Do the following:
    2. Receive the numbers in the parameters: a and b
    3. Multiply a and b and return the answer
 */
-
 function multiply(a,b){
   return a*b;
 }
-
+multiply(2,3)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +80,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(a,b){
+  return a*7;
 }
-
+dogYears(3,7)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -97,7 +103,7 @@ Use the hungryDog function and feeding requirements below to do the following:
      up to 5 lbs - 5% of their body weight
      6 - 10 lbs - 4% of their body weight 
      11 - 15 lbs - 3% of their body weight 
-     > 15lbs - 2% of their body weight 
+     > 15bs - 2% of their body weight 
 
   Puppies less than 1 year
      2 - 4 months 10% of their body weight
@@ -107,10 +113,23 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(age,weight){
+  if(age>=1 && weight<=5){
+    return weight*0.05;
+  }else if(age >=1 && weight>=6 && weight<=10){
+    return weight*0.04;
+  }else if(age>=1 && weight>=11 && weight<=15){
+    return weight*0.03;
+  }else if(age>=1 && weight>15){
+    return weight*0.02;
+  }else if(age>=1/6 && age<=1/3){
+    return weight*0.1;
+  }else if(age>=4/12 && age<=7/12){
+    return weight*.05;
+  }else if(age>=7/12 && age<=1){
+    return weight*.04;
   }
-
+  }
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/

@@ -130,7 +130,7 @@ function hungryDog(age,weight){
     return weight*.04;
   }
   }
-
+hungryDog(1,15)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -171,9 +171,9 @@ Using the miles function below do the following:
 */
 
 function miles(KM){
-    return km*0.62137119;
+    return KM*0.621371;
   }
-miles()
+miles(10)
 
 
 //Task 5b - Feet to CM
@@ -187,7 +187,7 @@ Using the feet function below do the following:
 function feet(cm){
   return cm*0.0328084;
   }
- feet()
+ feet(160)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/

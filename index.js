@@ -153,9 +153,25 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+// rock paper scissors
 function game(user, computer){
-
+  let random=math.random();
+  if (random<=1/3){
+    random=1;
+  }else if(random>1/3 && random<=2/3){
+    random=2;
+  }else if(random>2/3 && random<=1){
+    random=3;
+  }
+  if (user===computer){
+    return "it'a tie";
+  }else if(user===1 && computer===2 || user===2 && computer===3 || user===3 && computer===1){
+    return "you lose!";
+  }else if(user===1 && computer===3 || user===2 && computer===1 || user===3 && computer===2){
+    return "you win!";
+  }
 }
+game(1)
   
   
 

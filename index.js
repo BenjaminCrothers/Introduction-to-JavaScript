@@ -80,10 +80,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(a,b){
+function dogYears(a){
   return a*7;
 }
-dogYears(3,7)
+dogYears(3)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -113,7 +113,7 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(age,weight){
+function hungryDog(weight,age){
   if(age>=1 && weight<=5){
     return weight*0.05;
   }else if(age >=1 && weight>=6 && weight<=10){
@@ -122,15 +122,15 @@ function hungryDog(age,weight){
     return weight*0.03;
   }else if(age>=1 && weight>15){
     return weight*0.02;
-  }else if(age>=1/6 && age<=1/3){
+  }else if(age>2/12 && age<=4/12){
     return weight*0.1;
-  }else if(age>=4/12 && age<=7/12){
+  }else if(age>4/12 && age<=7/12){
     return weight*.05;
-  }else if(age>=7/12 && age<=1){
+  }else if(age>7/12 && age<1){
     return weight*.04;
   }
   }
-hungryDog(1,15)
+hungryDog(15,1)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -153,25 +153,21 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-// rock paper scissors
+// 0:rock, 1:paper 2:scissors
+let computer=Math.floor(Math.random()*3);
+const rock=0;
+const paper=1;
+const scissors=2;
 function game(user, computer){
-  let random=math.random();
-  if (random<=1/3){
-    random=1;
-  }else if(random>1/3 && random<=2/3){
-    random=2;
-  }else if(random>2/3 && random<=1){
-    random=3;
-  }
-  if (user===computer){
-    return "it'a tie";
-  }else if(user===1 && computer===2 || user===2 && computer===3 || user===3 && computer===1){
-    return "you lose!";
-  }else if(user===1 && computer===3 || user===2 && computer===1 || user===3 && computer===2){
+  if(user===rock && computer===scissors || user===paper && computer===rock || user===scissors && computer===paper){
     return "you win!";
+  }else if(user===rock && computer===paper || user===paper && computer===scissors || user===scissors && computer===rock){
+    return "you lose!";
+  }else if(user===computer){
+    return "it's a tie";
   }
 }
-game(1)
+game(rock,computer)
   
   
 
@@ -201,7 +197,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  return cm*0.0328084;
+  return cm/30.48;
   }
  feet(160)
 
@@ -216,9 +212,26 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(a){
+  var currentBottles=a.toString();
+  var newBottles=(a-1).toString();
+  var stringOne=" bottles of soda on the wall, ";
+  var stringTwo=" bottles of soda, take one down pass it around ";
+  var stringThree=" bottles of soda on the wall";
+  // var outString=currentBottles.concat(stringOne,currentBottles,stringTwo,newBottles,stringThree)
+  var outString=currentBottles+stringOne+currentBottles+stringTwo+newBottles+stringThree;
+  return outString;
+}
+let number=5;
+while(number>0){
+
+  // var numberTwo=number.toString();
+  console.log(annoyingSong(number))
+  number--;
+  if (number==0){
+    break;
   }
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
